@@ -6,13 +6,13 @@ font-size: 15px;
 letter-spacing: 2px;
 }
 img {
-border-radius:  50%;
+border-radius:  20%;
 }
 .profile-picture {
 display: block;
 margin-left: auto;
 margin-right: auto;
-margin-top: 20%;
+margin-top: 10%;
 height: auto;
 max-width: 300px;
 }
