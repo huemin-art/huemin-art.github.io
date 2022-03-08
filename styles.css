@@ -1,43 +1,63 @@
 body {
-background: black;
-color: #fff;
-font-family: 'Open Sans', sans-serif;
-font-size: 15px;
-letter-spacing: 2px;
+  background: black;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
 }
 img {
-border-radius:  50%;
+  border-radius:  50%;
+}
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  /* Whatever width you want */
 }
 .profile-picture {
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10%;
-height: auto;
-max-width: 260px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  height: auto;
+  max-width: 260px;
 }
 .profile-name {
-text-align: center;
-padding: 30px;
+  text-align: center;
+  padding: 30px;
 }
 .links {
-text-align: center;
-margin-top: 40px;
-padding: 12px;
-border: 1px solid white;
-border-width: 1px;
-width: 260px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+  padding: 12px;
+  border: 1px solid white;
+  border-width: 1px;
+  width: 260px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
 }
 a {
-text-decoration: none;
-color: white;
-transition: color 1s; 
+  text-decoration: none;
+  color: white;
+  transition: color 1s; 
 }
 a:hover {
-color: #000;
-background: #fff;
+  color: #000;
+  background: #fff;
 }
