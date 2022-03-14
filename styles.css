@@ -46,7 +46,7 @@ img {
   padding: 12px;
   border: 1px solid white;
   border-width: 1px;
-  width: 260px;
+  width: 240px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -58,6 +58,6 @@ a {
   transition: color 1s; 
 }
 a:hover {
-  color: #000;
+  color: #282828;
   background: #fff;
 }
