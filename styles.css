@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: #282828;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -58,6 +58,6 @@ a {
   transition: color 1s; 
 }
 a:hover {
-  color: #282828;
+  color: #000;
   background: #fff;
 }
