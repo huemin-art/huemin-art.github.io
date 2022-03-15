@@ -1,5 +1,5 @@
 body {
-  background: #282828;
+  background: #161616;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -42,7 +42,7 @@ img {
 }
 .links {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
   padding: 12px;
   border: 1px solid white;
   border-width: 1px;
