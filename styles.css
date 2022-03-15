@@ -38,7 +38,8 @@ img {
 }
 .profile-name {
   text-align: center;
-  padding: 30px;
+  padding: 22px;
+  font-size: 20px;
 }
 .links {
   text-align: center;
