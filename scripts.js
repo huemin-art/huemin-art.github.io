@@ -17,7 +17,6 @@ function getRandomImage(img) {
 
 const bgImageNames = [
   "detail1.jpg", 
-  "detail2.jpg", 
   "detail3.jpg",
   "detail4.jpg",
   "detail5.jpg",
@@ -35,7 +34,6 @@ const bgImageNames = [
   "detail17.jpg",
   "detail18.jpg",
   "detail19.jpg",
-  "detail20.jpg",
   "detail21.jpg",
   "detail22.jpg",
   "detail23.jpg",
