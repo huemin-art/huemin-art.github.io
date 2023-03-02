@@ -1,5 +1,5 @@
-const folderPath = "materia-mania/samples/"; // Replace with the path to your images folder
-const bgFolderPath = "materia-mania/detail/";
+const folderPath = "mm/samples/"; // Replace with the path to your images folder
+const bgFolderPath = "mm/detail/";
 const imgExtensions = ["jpg", "jpeg", "png", "gif"];
 
 let images = [];
