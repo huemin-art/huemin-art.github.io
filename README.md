@@ -1,1 +1,1 @@
-# https://www.huemin.art
+# http://www.huemin.art
