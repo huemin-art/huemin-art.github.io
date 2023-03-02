@@ -1,6 +1,7 @@
 const folderPath = "mm/samples/"; // Replace with the path to your images folder
 const bgFolderPath = "mm/detail/";
 const imgExtensions = ["jpg", "jpeg", "png", "gif"];
+const predefinedImageNames = ["sample1.png", "sample2.png", "sample3.png", "sample4.png", "sample5.png", "sample6.png", "sample7.png", "sample8.png", "sample9.png"];
 
 let images = [];
 let currentImageIndices = {};
@@ -37,18 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
   images.forEach((img) => {
     const imgClass = img.getAttribute("class");
     currentImageIndices[imgClass] = -1;
-    fetch(folderPath) // Fetch the folder's contents
-      .then(response => response.text())
-      .then(html => {
-        const doc = new DOMParser().parseFromString(html, "text/html"); // Convert the folder contents to a DOM object
-        const imageLinks = Array.from(doc.querySelectorAll("a")) // Get an array of all the links in the folder
-          .map(link => link.href) // Convert each link to a string
-          .filter(link => imgExtensions.includes(link.split(".").pop())); // Filter out links that don't have an image extension
-        imageFilenames[imgClass] = imageLinks.map(link => link.split("/").pop()); // Extract the filenames from the links and store them in an array
-
-        getRandomImage(img);
-      })
-      .catch(error => console.error(error));
+    imageFilenames[imgClass] = predefinedImageNames;
+    getRandomImage(img);
   });
 
   setRandomBackgroundImage();
@@ -60,3 +51,4 @@ $(document).ready(function() {
     $('.nav-btn').toggleClass('active');
   });
 })
+
