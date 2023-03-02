@@ -48,9 +48,15 @@ let imageFilenames = {};
 
 function getRandomImage(img) {
   const imgClass = img.getAttribute("class");
-  const newImageIndex = imageIndices.pop();
-  currentImageIndices[imgClass] = newImageIndex;
-  img.src = folderPath + imageFilenames[imgClass][currentImageIndices[imgClass]];
+  const availableImageFilenames = imageFilenames[imgClass];
+  if (availableImageFilenames.length === 0) {
+    // If no more available images, reset the list and shuffle it again
+    imageFilenames[imgClass] = shuffle(predefinedImageNames.slice());
+    availableImageFilenames = imageFilenames[imgClass];
+  }
+  const randomIndex = Math.floor(Math.random() * availableImageFilenames.length);
+  const newImageFilename = availableImageFilenames.splice(randomIndex, 1)[0];
+  img.src = folderPath + newImageFilename;
 }
 
 const bgImageNames = [
