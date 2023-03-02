@@ -24,18 +24,12 @@ function getRandomIndexExcludingCurrent(arr, currentIndex) {
   return randomIndex;
 }
 
+const bgImageNames = ["detail1.png", "detail2.png", "detail3.png"];
+
 function setRandomBackgroundImage() {
-  fetch(bgFolderPath) // Fetch the folder's contents
-    .then(response => response.text())
-    .then(html => {
-      const doc = new DOMParser().parseFromString(html, "text/html"); // Convert the folder contents to a DOM object
-      const imageLinks = Array.from(doc.querySelectorAll("a")) // Get an array of all the links in the folder
-        .map(link => link.href) // Convert each link to a string
-        .filter(link => imgExtensions.includes(link.split(".").pop())); // Filter out links that don't have an image extension
-      const imageFilename = imageLinks[Math.floor(Math.random() * imageLinks.length)].split("/").pop();
-      document.body.style.backgroundImage = `url(${bgFolderPath}${imageFilename})`; // Set the background image to the selected image
-    })
-    .catch(error => console.error(error));
+  const randomIndex = Math.floor(Math.random() * bgImageNames.length);
+  const bgImagePath = bgFolderPath + bgImageNames[randomIndex];
+  document.body.style.backgroundImage = `url(${bgImagePath})`;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
