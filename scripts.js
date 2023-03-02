@@ -1,7 +1,45 @@
 const folderPath = "mm/samples/"; // Replace with the path to your images folder
 const bgFolderPath = "mm/detail/";
 const imgExtensions = ["jpg", "jpeg", "png", "gif"];
-const predefinedImageNames = ["sample1.png", "sample2.png", "sample3.png", "sample4.png", "sample5.png", "sample6.png", "sample7.png", "sample8.png", "sample9.png"];
+
+const predefinedImageNames = [
+  "sample1.jpg",
+  "sample2.jpg",
+  "sample3.jpg",
+  "sample4.jpg",
+  "sample5.jpg",
+  "sample6.jpg",
+  "sample7.jpg",
+  "sample8.jpg",
+  "sample9.jpg",
+  "sample10.jpg",
+  "sample11.jpg",
+  "sample12.jpg",
+  "sample13.jpg",
+  "sample14.jpg",
+  "sample15.jpg",
+  "sample16.jpg",
+  "sample17.jpg",
+  "sample18.jpg",
+  "sample19.jpg",
+  "sample20.jpg",
+  "sample21.jpg",
+  "sample22.jpg",
+  "sample23.jpg",
+  "sample24.jpg",
+  "sample25.jpg",
+  "sample26.jpg",
+  "sample27.jpg",
+  "sample28.jpg",
+  "sample29.jpg",
+  "sample30.jpg",
+  "sample31.jpg",
+  "sample32.jpg",
+  "sample33.jpg",
+  "sample34.jpg",
+  "sample35.jpg",
+  "sample36.jpg"
+];
 
 let images = [];
 let currentImageIndices = {};
