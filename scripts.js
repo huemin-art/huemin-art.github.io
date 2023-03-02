@@ -2,8 +2,57 @@ const folderPath = "mm/samples/"; // Replace with the path to your images folder
 const bgFolderPath = "mm/detail/";
 const imgExtensions = ["jpg", "jpeg", "png", "gif"];
 
+const predefinedImageNames = [
+  "sample1.jpg",
+  "sample2.jpg",
+  "sample3.jpg",
+  "sample4.jpg",
+  "sample5.jpg",
+  "sample6.jpg",
+  "sample7.jpg",
+  "sample8.jpg",
+  "sample9.jpg",
+  "sample10.jpg",
+  "sample11.jpg",
+  "sample12.jpg",
+  "sample13.jpg",
+  "sample14.jpg",
+  "sample15.jpg",
+  "sample16.jpg",
+  "sample17.jpg",
+  "sample18.jpg",
+  "sample19.jpg",
+  "sample20.jpg",
+  "sample21.jpg",
+  "sample22.jpg",
+  "sample23.jpg",
+  "sample24.jpg",
+  "sample25.jpg",
+  "sample26.jpg",
+  "sample27.jpg",
+  "sample28.jpg",
+  "sample29.jpg",
+  "sample30.jpg",
+  "sample31.jpg",
+  "sample32.jpg",
+  "sample33.jpg",
+  "sample34.jpg",
+  "sample35.jpg",
+  "sample36.jpg"
+];
+
 let images = [];
-let selectedImageNames = [];
+let currentImageIndices = {};
+let imageIndices = [];
+let imageFilenames = {};
+
+function getRandomImage(img) {
+  const imgClass = img.getAttribute("class");
+  const newImageIndex = imageIndices.pop();
+  currentImageIndices[imgClass] = newImageIndex;
+  img.src = folderPath + imageFilenames[imgClass][currentImageIndices[imgClass]];
+}
+
 const bgImageNames = [
   "detail1.jpg", 
   "detail2.jpg", 
@@ -40,16 +89,14 @@ function setRandomBackgroundImage() {
 document.addEventListener("DOMContentLoaded", function() {
   images = Array.from(document.querySelectorAll(".sample"));
   const numImages = images.length;
-  const allImageNames = shuffle(predefinedImageNames.slice());
-  // Filter out any image names that have already been selected
-  const availableImageNames = allImageNames.filter(function(name) {
-    return selectedImageNames.indexOf(name) === -1;
+  imageIndices = shuffle([...Array(numImages).keys()]); // create an array of indices and shuffle it
+  images.forEach((img) => {
+    const imgClass = img.getAttribute("class");
+    currentImageIndices[imgClass] = -1;
+    imageFilenames[imgClass] = shuffle(predefinedImageNames.slice()); // shuffle the filenames for each image
+    getRandomImage(img);
   });
-  selectedImageNames = selectedImageNames.concat(availableImageNames.slice(0, numImages));
-  images.forEach(function(img, i) {
-    const imageName = selectedImageNames[i];
-    img.src = folderPath + imageName;
-  });
+
   setRandomBackgroundImage();
 });
 
