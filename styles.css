@@ -1,5 +1,5 @@
 body {
-  background: #161616;
+  background: #000000;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -62,4 +62,32 @@ a {
 a:hover {
   color: #000;
   background: #fff;
+}
+
+.collections-b {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(70, 210, 235);
+  border-width: 1px;
+  width: 240px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.collections-o {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(240, 157, 89);
+  border-width: 1px;
+  width: 240px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
 }
