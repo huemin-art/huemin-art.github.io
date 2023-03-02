@@ -68,7 +68,6 @@ const bgImageNames = [
   "detail12.jpg",
   "detail13.jpg",
   "detail14.jpg",
-  "detail15.jpg",
   "detail16.jpg",
   "detail17.jpg",
   "detail18.jpg",
