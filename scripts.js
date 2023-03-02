@@ -15,7 +15,33 @@ function getRandomImage(img) {
   img.src = folderPath + imageFilenames[imgClass][currentImageIndices[imgClass]];
 }
 
-const bgImageNames = ["detail1.png", "detail2.png", "detail3.png"];
+const bgImageNames = [
+  "detail1.jpg", 
+  "detail2.jpg", 
+  "detail3.jpg",
+  "detail4.jpg",
+  "detail5.jpg",
+  "detail6.jpg",
+  "detail7.jpg",
+  "detail8.jpg",
+  "detail9.jpg",
+  "detail10.jpg",
+  "detail11.jpg",
+  "detail12.jpg",
+  "detail13.jpg",
+  "detail14.jpg",
+  "detail15.jpg",
+  "detail16.jpg",
+  "detail17.jpg",
+  "detail18.jpg",
+  "detail19.jpg",
+  "detail20.jpg",
+  "detail21.jpg",
+  "detail22.jpg",
+  "detail23.jpg",
+  "detail24.jpg",
+  "detail25.jpg"
+];
 
 function setRandomBackgroundImage() {
   const randomIndex = Math.floor(Math.random() * bgImageNames.length);
