@@ -45,12 +45,33 @@ let images = [];
 let currentImageIndices = {};
 let imageIndices = [];
 let imageFilenames = {};
+let usedImages = [];
 
 function getRandomImage(img) {
   const imgClass = img.getAttribute("class");
-  const newImageIndex = imageIndices.pop();
+  const newImageIndex = getRandomIndexExcludingCurrent(imageFilenames[imgClass], currentImageIndices[imgClass]);
   currentImageIndices[imgClass] = newImageIndex;
   img.src = folderPath + imageFilenames[imgClass][currentImageIndices[imgClass]];
+}
+
+function getRandomIndexExcludingCurrent(arr, currentIndex) {
+  if (arr.length <= 1) {
+    return 0;
+  }
+  let availableIndices = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!usedImages.includes(arr[i]) && i !== currentIndex) {
+      availableIndices.push(i);
+    }
+  }
+  if (availableIndices.length === 0) {
+    usedImages = [];
+    availableIndices = Array.from(Array(arr.length).keys());
+    availableIndices.splice(currentIndex, 1);
+  }
+  const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+  usedImages.push(arr[randomIndex]);
+  return randomIndex;
 }
 
 const bgImageNames = [
