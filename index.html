@@ -1,28 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-<title>huemin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huemin.art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<div class="outer">
-  <div class="middle">
-    <div class="inner">
-      <body>
-        <img src="assets/artifact.jpg" alt="profile picture" class="profile-picture">
-        <div class="profile-name">huemin</div>
-        <a href="https://opensea.io/collection/source-by-huemin" class="collections-o">source</a>
-        <a href="https://huemin-art.github.io/materia-mania" class="collections-o">materia-mania</a>
-        <a href="https://opensea.io/collection/new-dimension-huemin" class="collections-o">new-dimension</a>
-        <a href="https://foundation.app/@huemin" class="collections-o">foundation</a>
-        <a href="https://objkt.com/profile/huemin/" class="collections-o">objkt</a>
-        <a href="https://bsky.app/profile/huemin.bsky.social" class="links">bsky</a>
-        <a href="https://twitter.com/huemin_art" class="links">twitter</a>
-        <a href="https://www.instagram.com/huemin_art/" class="links">instagram</a>
-        <!-- <a href="https://discordapp.com/users/474070326192504842/" class="links">discord</a>
-        <a href="https://github.com/huemin-art" class="links">github</a> -->
-      </body>
+
+<body>
+    <header>
+        <h1><a href="index.html">huemin.art</a></h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://github.com/huemin-art" target="_blank"><img src="assets/some/icons8-github.svg"
+                alt="Github"></a>
+            <a href="https://x.com/huemin_art" target="_blank"><img src="assets/some/icons8-twitterx.svg"
+                    alt="X"></a>
+            <a href="https://instagram.com/huemin_art" target="_blank"><img src="assets/some/icons8-instagram.svg"
+                    alt="Instagram"></a>
+        </div>
+    </header>
+
+    <div id="gallery">
+        <div class="gallery-container" id="galleryContainer"></div>
+        <button id="loadMoreBtn">Load More</button>
     </div>
-  </div>
-</div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <main>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 huemin</p>
+    </footer>
+
+    <script src="scripts/grid.js"></script>
+</body>
+
 </html>
