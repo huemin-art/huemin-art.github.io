@@ -1,6 +1,9 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ddd;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0 20px;
