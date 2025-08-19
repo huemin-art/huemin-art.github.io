@@ -1,0 +1,124 @@
+/* About page specific styles */
+.home-btn {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f5f5f5;
+    text-decoration: none;
+    border: 1px solid #f5f5f5;
+    padding: 10px 24px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.home-btn:hover {
+    background: #f5f5f5;
+    color: #0a0a0a;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    text-align: center;
+}
+
+.about-content section {
+    margin-bottom: 60px;
+}
+
+.about-content h2 {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 25px 0;
+    color: #f5f5f5;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-content li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #b0b0b0;
+    margin-bottom: 8px;
+}
+
+.about-content a {
+    color: #f5f5f5;
+    text-decoration: underline;
+    text-decoration-color: rgba(245, 245, 245, 0.3);
+    text-underline-offset: 2px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.about-content a:hover {
+    text-decoration-color: rgba(245, 245, 245, 0.8);
+}
+
+/* Add external link icon to links */
+.about-content a[target="_blank"]:after {
+    content: " ↗";
+    font-size: 12px;
+    vertical-align: super;
+    opacity: 0.5;
+}
+
+/* Email links get a different icon */
+.about-content a[href^="mailto:"]:after {
+    content: " ✉";
+    font-size: 12px;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+.exhibitions {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #222;
+    margin-top: 80px;
+}
+
+footer p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 15px 60px;
+    }
+    
+    .about-content h2 {
+        font-size: 20px;
+    }
+    
+    .about-content p,
+    .about-content li {
+        font-size: 14px;
+    }
+}
